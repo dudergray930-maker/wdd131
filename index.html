@@ -154,123 +154,31 @@
       font-size: 13px;
     }
 
-    .group {
-      margin: 30px 0;
-    }
-
-    .group-title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 13px 2px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .group-title::after {
-      content: "";
-      height: 1px;
-      flex: 1;
-      background: var(--line);
-    }
-
-    .cards {
+    .assignment-links {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
 
-    .card {
-      display: flex;
-      flex-direction: column;
-      min-height: 188px;
+    .assignment-links a {
       padding: 19px;
       border: 1px solid var(--line);
       border-radius: 20px;
-      background: rgba(25, 29, 43, .78);
+      background: var(--surface);
       color: var(--text);
       text-decoration: none;
-      transition:
-        transform .2s,
-        border-color .2s,
-        background .2s,
-        box-shadow .2s;
+      transition: transform .2s, background .2s, border-color .2s;
     }
 
-    .card:hover {
+    .assignment-links a:hover {
       transform: translateY(-4px);
       border-color: var(--accent);
       background: var(--surface-hover);
-      box-shadow: 0 14px 35px var(--glow);
     }
 
-    .card:focus-visible {
+    .assignment-links a:focus-visible {
       outline: 3px solid var(--accent-2);
       outline-offset: 3px;
-    }
-
-    .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .card-icon {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      background: var(--surface-hover);
-      font-size: 20px;
-    }
-
-    .arrow {
-      color: var(--muted);
-      font-size: 19px;
-      transition: transform .2s, color .2s;
-    }
-
-    .card:hover .arrow {
-      transform: translate(3px, -3px);
-      color: var(--accent);
-    }
-
-    .card h3 {
-      margin: 18px 0 5px;
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: -.3px;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.5;
-    }
-
-    .card-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 17px;
-    }
-
-    .tag {
-      padding: 5px 9px;
-      border-radius: 99px;
-      background: var(--glow);
-      color: var(--accent);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .3px;
-    }
-
-    .week {
-      color: var(--muted);
-      font-size: 10px;
     }
 
     footer {
@@ -289,7 +197,7 @@
     }
 
     @media (max-width: 800px) {
-      .cards {
+      .assignment-links {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
@@ -323,13 +231,9 @@
         letter-spacing: -2px;
       }
 
-      .cards {
+      .assignment-links {
         grid-template-columns: 1fr;
         gap: 10px;
-      }
-
-      .card {
-        min-height: 162px;
       }
 
       footer {
@@ -372,11 +276,13 @@
           <p>Every project has a place. Choose one to jump in.</p>
         </div>
 
-        <a href="Week 1/meta-css.html" alt="Meta CSS">
-        <a href="Week 1/mission/mission.html" alt="Mission Statement">
-        <a href="Week 3/responsive/responsive.html" alt="Responsive Design">
-        <a href="Week 3/cool_pics.html" alt="Cool Pics">
-        </a>
+        <div class="assignment-links">
+          <a href="Week 1/meta-css.html">Meta-CSS</a>
+          <a href="Week 1/mission/mission.html">Mission Statement</a>
+          <a href="Week 1/sandbox/drop-down-menu.html">Drop Down Menu</a>
+          <a href="Week 3/responsive/responsive.html">Responsive Design</a>
+          <a href="Week 3/cool_pics.html">Cool Pics</a>
+        </div>
       </section>
     </main>
 
