@@ -1,56 +1,10 @@
-/*
-@media screen and (min-width: 700px) {
+const menuButton = document.querySelector(".menu-btn");
+const navigation = document.querySelector("nav");
 
-}
-*/
+menuButton.addEventListener("click", () => {
+    navigation.classList.toggle("hide");
+    menuButton.classList.toggle("change");
 
-/*
-Get the elements that we want to modify
-
-Figure out when the modification should happen
-
-For each element
-    figure out which one it is
-    output that number
-
-Figure out where we will display the message...get a reference
-*/
-
-function displayWelcome() {
-    const headerEl = document.querySelector("header");
-    const dayIndex = new Date().getDay();
-    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const message = `Happy ${dayNames[dayIndex]}!`;
-    const messageEl = document.createElement("p");
-    messageEl.textContent = message;
-    headerEl.append(messageEl);
-}
-
-function renderNumber(element, index) {
-    const Number = document.createElement("span");
-    Number.textContent = index + 1;
-    element.prepend(Number);
-}
-
-function addIndex() {
-    const scriptureElements =document.querySelectorAll(".scripture");
-    scriptureElements.forEach(renderNumber);
-}
-
-function toggleMenu() {
-    const navEl = document.querySelector("nav");
-    navEl.classList.toggle("open");
-}
-
-function toggleMenu() {
-    const navEl = document.querySelector("nav");
-    navEl.classList.toggle("open");
-}
-
-addIndex();
-displayWelcome();
-
-const menuBtn = document.querySelector(".menuBtn");
-const navEl = document.querySelector(".main-nav");
-
-menuBtn.addEventListener("click", toggleMenu);
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+    menuButton.setAttribute("aria-expanded", !isOpen);
+});
