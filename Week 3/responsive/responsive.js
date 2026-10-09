@@ -41,7 +41,16 @@ function toggleMenu() {
     const navEl = document.querySelector("nav");
     navEl.classList.toggle("open");
 }
-document.querySelector(".menu-button").addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+    const navEl = document.querySelector("nav");
+    navEl.classList.toggle("open");
+}
 
 addIndex();
 displayWelcome();
+
+const menuBtn = document.querySelector(".menuBtn");
+const navEl = document.querySelector(".main-nav");
+
+menuBtn.addEventListener("click", toggleMenu);

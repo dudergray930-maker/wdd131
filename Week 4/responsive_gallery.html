@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Gallery</title>
+    <link rel="stylesheet" href="responsive_gallery.css">
+    <script src="responsive_gallery.js" defer></script>
+</head>
+<body>
+    <h1>Gallery</h1>
+
+    <main>
+        <section class="gallery" aria-label="Photo gallery">
+            <figure>
+                <img src="images/images/book-sm.jpg" alt="Person reading a book">
+            </figure>
+            <figure>
+                <img src="images/images/couch-sm.jpg" alt="Person sitting on a couch with a phone">
+            </figure>
+            <figure>
+                <img src="images/images/desk-sm.jpg" alt="Work desktop">
+            </figure>
+            <figure>
+                <img src="images/images/keyboard-sm.jpg" alt="Person typing on a keyboard">
+            </figure>
+            <figure>
+                <img src="images/images/phone-sm.jpg" alt="Person looking at a phone">
+            </figure>
+            <figure>
+                <img src="images/images/sit-sm.jpg" alt="Person sitting on a couch">
+            </figure>
+        </section>
+    </main>
+
+    <dialog class="viewer">
+        <button class="close-viewer" aria-label="Close image">X</button>
+        <img class="full-image" alt="">
+    </dialog>
+</body>
+</html>
