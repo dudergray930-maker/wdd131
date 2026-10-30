@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for an event.">
+  <title>Event Ticket Registration</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <header class="page-heading">
+      <p class="eyebrow">EVENT REGISTRATION</p>
+      <h1>Get your event ticket</h1>
+      <p class="intro">Complete the form below to reserve your place. All fields are required.</p>
+    </header>
+
+    <form id="event-form" novalidate>
+      <div class="form-grid">
+        <div class="field field-wide">
+          <label for="full-name">Full name</label>
+          <input id="full-name" name="fullName" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field field-wide">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label for="event-date">Event date</label>
+          <input id="event-date" name="eventDate" type="date" required>
+          <small>Choose a date after today.</small>
+        </div>
+
+        <div class="field">
+          <label for="attendee-type">Type</label>
+          <select id="attendee-type" name="attendeeType" required>
+            <option value="" selected disabled>Select student or guest</option>
+            <option value="student">Student</option>
+            <option value="guest">Guest</option>
+          </select>
+        </div>
+
+        <div class="field field-wide" id="code-field" hidden>
+          <label for="attendee-code" id="code-label">Student I#</label>
+          <input id="attendee-code" name="attendeeCode" type="text" autocomplete="off" disabled>
+          <small id="code-hint"></small>
+        </div>
+      </div>
+
+      <button type="submit">Register for event</button>
+    </form>
+
+    <section id="form-messages" class="message-panel" aria-live="polite" aria-atomic="true" hidden>
+      <h2 id="message-title"></h2>
+      <div id="message-content"></div>
+    </section>
+
+    <footer>Event Ticket Registration</footer>
+  </main>
+</body>
+</html>
