@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recipe Book</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="recipes.js"></script>
+</head>
+
+<body>
+  <div class="page">
+    <header class="site-header">
+      <img class="logo" src="images/recipe-book.png" alt="">
+      <h1>RecipeBook</h1>
+    </header>
+
+    <main>
+      <form class="search" id="search-form" role="search">
+        <label class="visually-hidden" for="recipe-search">Find a recipe</label>
+        <input id="recipe-search" type="search" placeholder="Find a recipe">
+        <button type="submit" aria-label="Search recipes">
+          <img src="images/search.svg" alt="">
+        </button>
+      </form>
+
+      <div id="recipe-list" aria-live="polite"></div>
+    </main>
+
+    <footer class="site-footer">
+      <a class="flaticon-credit"
+         href="https://www.flaticon.com/free-icons/recipe"
+         title="Recipe icons">
+        Recipe icons created by Freepik - Flaticon
+      </a>
+
+      <div class="social">
+        <a href="#" aria-label="Instagram">
+          <img src="images/instagram_icon.svg" alt="">
+        </a>
+        <a href="#" aria-label="YouTube">
+          <img src="images/youtube_icon.svg" alt="">
+        </a>
+        <a href="#" aria-label="Pinterest">
+          <img src="images/pinterest_icon.svg" alt="">
+        </a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
